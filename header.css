@@ -91,6 +91,8 @@
 .containerIcons .icon {
   width: 20px;
   margin-right: 10px;
+
+  cursor: pointer;
 }
 
 .containerIcons .icon.-car {
@@ -100,4 +102,6 @@
 .containerIcons .iconMenuHamburger {
   grid-area: menu;
   width: 30px;
+
+  cursor: pointer;
 }

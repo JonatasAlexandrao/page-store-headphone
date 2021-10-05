@@ -28,8 +28,25 @@
   font-weight: 700;
 }
 
-.productInfo .title span {
-  font-size: 1vw;
+.title .avaluation {
+  display: flex;
+  align-items: center;
+}
+
+.avaluation .stars{
+  height: 20px;
+}
+
+.avaluation .stars img {
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+
+.avaluation span {
+  font-size: .8vw;
+  color: rgba(245, 245, 245, .3);
 }
 
 .productInfo .description {
@@ -47,39 +64,96 @@
 
 .productInfo .price h2 {
   font-size: 2.5vw;
+  color: var(--color-highlight);
 }
 
 .productInfo .price span {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   text-decoration: line-through;
 }
 
 .productInfo .productButtons {
   width: 50%;
-  /*background-color: rgb(0, 140, 255);*/
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 3vw;
+  gap: 5px;
+  margin-bottom: 5px;
 }
 
 .productButtons .button {
   border: none;
-  padding: 1vw;
+  /*padding: 1vw;*/
 
   text-transform: uppercase;
   font-size: 1.2vw;
 
   background-color: var(--color-highlight);
-  color: var(--color-white)
+  color: var(--color-white);
+
+  cursor: pointer;
 }
 
-.productButtons .button.-cont {
-  background-color: transparent;
+.cont {
   border: 2px solid var(--color-highlight);
-  color: var(--color-highlight); 
+  color: var(--color-highlight);
+  font-size: 1.5vw;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.productButtons b {
-  font-size: 1vw;
-  text-decoration: underline;
+.cont .less, .cont .plus {
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  color: var(--color-highlight);
+  font-size: 1.5vw;
+
+  cursor: pointer;
 }
+
+.cont span {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wishlist {
+  width: 25%;
+  min-width: 140px;
+  height: 1vw; 
+}
+
+.wishlist a {
+  height: 1vw;
+  
+  font-size: 100%;
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  
+}
+
+.wishlist a img {
+  height: 100%;
+  object-fit: contain;
+  margin: 5px;
+}
+
+
 
 
 /* --------- Imagens ------------*/
@@ -99,6 +173,10 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+
+  display: flex;
+  /*justify-content: center;*/
+  /*align-items: center;*/
 }
 
 .containerProductImage .miniatureFigures {
@@ -116,9 +194,13 @@
   width: 70%;
   max-width: 80px;
   margin-bottom: 20px;
-  /*grid-area: mini;*/
+
+  cursor: pointer;
 }
 
+.miniatureFigures img:hover {
+  border: var(--color-highlight) 2px solid;
+}
 
 
 
